@@ -1,8 +1,9 @@
 ## **[Back to Homepage](evanhanifw.github.io)**
 ### Full Certification
 
-**[Data Analytics by Google- Coursera](https://www.coursera.org/account/accomplishments/professional-cert/C8FRK8GEKAA8)**
+**[Data Analytics by Google- Coursera](https://www.coursera.org/account/accomplishments/professional-cert/C8FRK8GEKAA8)**    
 ***Completed*** the Google Data Analytics Professional Certificate, a thorough program requiring approximately **240 hours of coursework**. Developed foundational skills in data collection, cleaning, analysis, and visualization using tools such as **SQL, R, Tableau, and spreadsheets**. Achieved a strong understanding of data-driven decision making, preparing for entry-level roles in data analytics.
+
 **(8/8) Course completed:**
 - [Foundations: Data, Data, Everywhere](https://www.coursera.org/account/accomplishments/certificate/4XXUL533VS7R)
 - [Ask Questions to Make Data-Driven Decisions](https://www.coursera.org/account/accomplishments/certificate/4XXUL533VS7R)
