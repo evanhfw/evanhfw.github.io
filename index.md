@@ -10,9 +10,10 @@
 - [Deeplearning Specialization by Deeplearning.Ai - Coursera](#deeplearning-specialization-by-deeplearning.ai-coursera)
 - [Data Science with Python (Career Track) - Datacamp](#data-science-with-python-career-track-datacamp)
 - [Data Analyst with Python (Career Track) - Datacamp](#data-analyst-with-python-career-track-datacamp)
-- Machine Learning Scientist with Pyhton (Career Track) - Datacamp
-- Machine Learning Engineer - Dicoding
-- Data Scientist - Dicoding
+- [Machine Learning Scientist with Pyhton (Career Track) - Datacamp](#machine-learning-scientist-with-python-career-track-datacamp)
+- [Machine Learning Engineer - Dicoding](#machine-learning-engineer-dicoding)
+- [Data Scientist - Dicoding](#data-scientist-dicoding)
+- to be continued.
 
 ### Full Certification
 
@@ -28,7 +29,7 @@
 - [Data Analysis with R Programming](https://www.coursera.org/account/accomplishments/certificate/SWBFPSUHCSHX)
 - [Google Data Analytics Capstone: Complete a Case Study](https://www.coursera.org/account/accomplishments/certificate/RTYUQHVGFRGE)
 
-**[Advanced Data Analytics by Google - Coursera](https://www.coursera.org/account/accomplishments/professional-cert/TZ2M5A7L4QPX)**     
+#### <a id="advanced-data-analytics-by-google-coursera"></a> **[Advanced Data Analytics by Google - Coursera](https://www.coursera.org/account/accomplishments/professional-cert/TZ2M5A7L4QPX)**     
 > ***Completed*** the Google Advanced Data Analytics Professional Certificate, a rigorous program requiring a substantial time commitment. Developed advanced skills in data analysis, statistical methods, and machine learning over approximately **150 hours of coursework**. Acquired expertise in advanced techniques using a comprehensive tech stack including **Python, SQL, TensorFlow, and BigQuery**. Prepared for higher-level roles in data analytics, capable of performing complex data-driven decision making and predictive modeling.     
 **(7/7) Course Completed:**
 - [Foundations of Data Science](https://www.coursera.org/account/accomplishments/certificate/L6A63QZ6NUDX)
@@ -40,14 +41,14 @@
 - [Google Advanced Data Analytics Capstone](https://www.coursera.org/account/accomplishments/certificate/GQAG3KLGNYGS)
 
 
-**[Deep Learning Specialization by Deeplearning.Ai - Coursera](https://www.coursera.org/specializations/deep-learning?courseAccomplishmentCurrentPage=1)**    
+#### <a id="deeplearning-specialization-by-deeplearning.ai-coursera"></a> **[Deep Learning Specialization by Deeplearning.Ai - Coursera](https://www.coursera.org/specializations/deep-learning?courseAccomplishmentCurrentPage=1)**    
 > ***Currently progressing*** through the DeepLearning Specialization by DeepLearning.AI, a detailed program consisting of **5 courses** and requiring around **80 hours of coursework**. Developing advanced skills in neural networks, deep learning techniques, and AI model implementation using tools such as **TensorFlow and Keras**. Gaining a deep understanding of concepts like **neural networks, CNNs, RNNs, LSTMs**, and more, preparing for intermediate-level roles in artificial intelligence and machine learning.     
 **(3/5 Completed Course):**
 - [Neural Networks and Deep Learning](https://www.coursera.org/account/accomplishments/verify/ELMJLW7QLHZA)
 - [Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization](https://www.coursera.org/account/accomplishments/verify/HRAVAJ8TWN6W)
 - [Structuring Machine Learning Projects](https://www.coursera.org/account/accomplishments/records/SQH97UWT9JB4)
 
-**[Data Science with Python (Career Track) - Datacamp](https://app.datacamp.com/learn/career-tracks/data-scientist-in-python)**      
+#### <a id="data-science-with-python-career-track-datacamp"></a> **[Data Science with Python (Career Track) - Datacamp](https://app.datacamp.com/learn/career-tracks/data-scientist-in-python)**      
 > ***Completed*** the Data Science with Python Career Track by DataCamp, a comprehensive program comprising **30 courses and 13 projects**, totaling **112 hours of content**. Developed intermediate-level skills in Python programming, data manipulation, visualization, and machine learning using tools such as **Pandas, matplotlib, seaborn, scikit-learn, NumPy, Pingouin, statsmodels, and Git**, preparing for a career in data science.      
 **(30/30) Course Completed:**
 - Introduction to Python
@@ -81,7 +82,7 @@
 - Joining Data in SQL
 - Introduction to Git
 
-**[Data Analyst with Python (Career Track) - Datacamp]()**
+#### <a id="data-analyst-with-python-career-track-datacamp"></a> **[Data Analyst with Python (Career Track) - Datacamp]()**
 > ***Completed*** the Data Analyst with Python Career Track by DataCamp, a comprehensive program consisting of **9 courses and 5 projects**, totaling **36 hours of content**. Developed foundational skills in hypothesis testing, data analysis, data manipulation, and data visualization using tools such as **Python, Matplotlib, Seaborn, Pandas, statsmodels, and Pingouin**. Prepared for entry-level roles in data analysis.
 - Introduction to Python
 - [Intermediate Python](https://www.datacamp.com/completed/statement-of-accomplishment/course/674ecbe50a0234fdcbe391e43b86194dc10578d1)
@@ -93,7 +94,7 @@
 - [Sampling](https://www.datacamp.com/completed/statement-of-accomplishment/course/d6f542c333298c884d5b2dafa9268eaaa00bd389)
 - Hypothesis Testing
 
-**[Machine Learning Scientist with Python (Career Track) - Datacamp]()**
+#### <a id="machine-learning-scientist-with-python-career-track-datacamp"></a> **[Machine Learning Scientist with Python (Career Track) - Datacamp]()**
 > ***Completed*** the Machine Learning Scientist with Python Career Track by DataCamp, a comprehensive program consisting of **21 courses and 3 projects**, totaling **85 hours of content**. Developed intermediate-level skills in **end-to-end machine learning processes**, including **feature engineering, cross-validation, and hyperparameter tuning** using tools such as **Python, PyTorch, scikit-learn, XGBoost, and Pandas**. Prepared for roles focused on machine learning and data science.
 - [scikit-learn: Supervised Learning](https://www.datacamp.com/completed/statement-of-accomplishment/course/8c0202c7ba065b4cf461d7babd52c789141637e4)
 - [Unsupervised Learning](https://www.datacamp.com/completed/statement-of-accomplishment/course/9023ed9716f3898af9bb26a3e3c81a62c54678c5)
@@ -116,6 +117,6 @@
 - PySpark: Machine Learning
 - [Winning a Kaggle Competition](https://www.datacamp.com/completed/statement-of-accomplishment/course/f98b6ae7e954f25d118b4f629da487016cfcd884)
 
-[Machine Learning Engineer - Dicoding]()  
+#### <a id="machine-learning-engineer-dicoding"></a> [Machine Learning Engineer - Dicoding]()  
 
-[Data Scientist - Dicoding]()
+#### <a id="data-scientist-dicoding"></a> [Data Scientist - Dicoding]()
