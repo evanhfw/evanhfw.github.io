@@ -6,10 +6,10 @@
 ### Summary
 
 - [Data Analytics by Google - Coursera](#data-analytics-by-google-coursera)
-- Advanced Data Analytics by Google - Coursera
-- Deeplearning Specialization by Deeplearning.Ai - Coursera
-- Data Science with Python (Career Track) - Datacamp
-- Data Analyst with Python (Career Track) - Datacamp
+- [Advanced Data Analytics by Google - Coursera](#advanced-data-analytics-by-google-coursera)
+- [Deeplearning Specialization by Deeplearning.Ai - Coursera](#deeplearning-specialization-by-deeplearning.ai-coursera)
+- [Data Science with Python (Career Track) - Datacamp](#data-science-with-python-career-track-datacamp)
+- [Data Analyst with Python (Career Track) - Datacamp](#data-analyst-with-python-career-track-datacamp)
 - Machine Learning Scientist with Pyhton (Career Track) - Datacamp
 - Machine Learning Engineer - Dicoding
 - Data Scientist - Dicoding
