@@ -68,6 +68,7 @@
 - Introduction to Git
 
 **[Data Analyst with Python (Career Track) - Datacamp]()**
+> Something
 - Introduction to Python
 - [Intermediate Python](https://www.datacamp.com/completed/statement-of-accomplishment/course/674ecbe50a0234fdcbe391e43b86194dc10578d1)
 - [Pandas: Data Manipulation](https://www.datacamp.com/completed/statement-of-accomplishment/course/b5a41c9e68617521b150e2f8516a1cb238cf465e)
@@ -79,6 +80,7 @@
 - Hypothesis Testing
 
 **[Machine Learning Scientist with Python (Career Track) - Datacamp]()**
+> Something
 - [scikit-learn: Supervised Learning](https://www.datacamp.com/completed/statement-of-accomplishment/course/8c0202c7ba065b4cf461d7babd52c789141637e4)
 - [Unsupervised Learning](https://www.datacamp.com/completed/statement-of-accomplishment/course/9023ed9716f3898af9bb26a3e3c81a62c54678c5)
 - [Linear Classifiers]
