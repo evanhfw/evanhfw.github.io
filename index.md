@@ -1,7 +1,7 @@
 
 # Certification Pages
 
-## **[Back to Homepage](evanhanifw.github.io)**
+## **[Back to Homepage](evanhanifw.github.io)** (#TODO)
 
 ### Summary
 
@@ -13,7 +13,7 @@
 - [Machine Learning Scientist with Pyhton (Career Track) - Datacamp](#machine-learning-scientist-with-python-career-track-datacamp)
 - [Machine Learning Engineer - Dicoding](#machine-learning-engineer-dicoding)
 - [Data Scientist - Dicoding](#data-scientist-dicoding)
-- to be continued.
+- to be continued. (#TODO)
 
 ### Full Certification
 
@@ -117,6 +117,6 @@
 - PySpark: Machine Learning
 - [Winning a Kaggle Competition](https://www.datacamp.com/completed/statement-of-accomplishment/course/f98b6ae7e954f25d118b4f629da487016cfcd884)
 
-#### <a id="machine-learning-engineer-dicoding"></a> [Machine Learning Engineer - Dicoding]()  
+#### <a id="machine-learning-engineer-dicoding"></a> [Machine Learning Engineer - Dicoding]()(#TODO)  
 
-#### <a id="data-scientist-dicoding"></a> [Data Scientist - Dicoding]()
+#### <a id="data-scientist-dicoding"></a> [Data Scientist - Dicoding]()(#TODO)
