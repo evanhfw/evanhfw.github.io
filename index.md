@@ -5,7 +5,7 @@
 
 ### Summary
 
-- Data Analytics by Google - Coursera
+- [Data Analytics by Google - Coursera](#data-analytics-by-google-coursera)
 - Advanced Data Analytics by Google - Coursera
 - Deeplearning Specialization by Deeplearning.Ai - Coursera
 - Data Science with Python (Career Track) - Datacamp
@@ -16,7 +16,7 @@
 
 ### Full Certification
 
-**[Data Analytics by Google- Coursera](https://www.coursera.org/account/accomplishments/professional-cert/C8FRK8GEKAA8)**    
+#### **[Data Analytics by Google- Coursera](https://www.coursera.org/account/accomplishments/professional-cert/C8FRK8GEKAA8)**    
 > ***Completed*** the Google Data Analytics Professional Certificate, a thorough program requiring approximately **240 hours of coursework**. Developed foundational skills in data collection, cleaning, analysis, and visualization using tools such as **SQL, R, Tableau, and spreadsheets**. Achieved a strong understanding of data-driven decision making, preparing for entry-level roles in data analytics.     
 **(8/8) Course completed:**         
 - [Foundations: Data, Data, Everywhere](https://www.coursera.org/account/accomplishments/certificate/4XXUL533VS7R)
@@ -94,7 +94,7 @@
 - Hypothesis Testing
 
 **[Machine Learning Scientist with Python (Career Track) - Datacamp]()**
-> Something
+> ***Completed*** the Machine Learning Scientist with Python Career Track by DataCamp, a comprehensive program consisting of **21 courses and 3 projects**, totaling **85 hours of content**. Developed intermediate-level skills in **end-to-end machine learning processes**, including **feature engineering, cross-validation, and hyperparameter tuning** using tools such as **Python, PyTorch, scikit-learn, XGBoost, and Pandas**. Prepared for roles focused on machine learning and data science.
 - [scikit-learn: Supervised Learning](https://www.datacamp.com/completed/statement-of-accomplishment/course/8c0202c7ba065b4cf461d7babd52c789141637e4)
 - [Unsupervised Learning](https://www.datacamp.com/completed/statement-of-accomplishment/course/9023ed9716f3898af9bb26a3e3c81a62c54678c5)
 - [Linear Classifiers]
