@@ -1,5 +1,19 @@
+
 # Certification Pages
+
 ## **[Back to Homepage](evanhanifw.github.io)**
+
+### Summary
+
+- Data Analytics by Google - Coursera
+- Advanced Data Analytics by Google - Coursera
+- Deeplearning Specialization by Deeplearning.Ai - Coursera
+- Data Science with Python (Career Track) - Datacamp
+- Data Analyst with Python (Career Track) - Datacamp
+- Machine Learning Scientist with Pyhton (Career Track) - Datacamp
+- Machine Learning Engineer - Dicoding
+- Data Scientist - Dicoding
+
 ### Full Certification
 
 **[Data Analytics by Google- Coursera](https://www.coursera.org/account/accomplishments/professional-cert/C8FRK8GEKAA8)**    
@@ -27,14 +41,14 @@
 
 
 **[Deep Learning Specialization by Deeplearning.Ai - Coursera](https://www.coursera.org/specializations/deep-learning?courseAccomplishmentCurrentPage=1)**    
-> ***Currently progressing*** through the DeepLearning Specialization by DeepLearning.AI, a detailed program requiring around **80 hours of coursework**. Developing advanced skills in neural networks, deep learning techniques, and AI model implementation using tools such as **TensorFlow and Keras**. Gaining a deep understanding of concepts like **Neural Networks, CNNs, RNNs, LSTMs,** and more, preparing for advanced roles in artificial intelligence and machine learning.     
+> ***Currently progressing*** through the DeepLearning Specialization by DeepLearning.AI, a detailed program consisting of **5 courses** and requiring around **80 hours of coursework**. Developing advanced skills in neural networks, deep learning techniques, and AI model implementation using tools such as **TensorFlow and Keras**. Gaining a deep understanding of concepts like **neural networks, CNNs, RNNs, LSTMs**, and more, preparing for intermediate-level roles in artificial intelligence and machine learning.     
 **(3/5 Completed Course):**
 - [Neural Networks and Deep Learning](https://www.coursera.org/account/accomplishments/verify/ELMJLW7QLHZA)
 - [Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization](https://www.coursera.org/account/accomplishments/verify/HRAVAJ8TWN6W)
 - [Structuring Machine Learning Projects](https://www.coursera.org/account/accomplishments/records/SQH97UWT9JB4)
 
 **[Data Science with Python (Career Track) - Datacamp](https://app.datacamp.com/learn/career-tracks/data-scientist-in-python)**      
-> ***Completed*** the Data Science with Python Career Track by DataCamp, a comprehensive program comprising **30 courses and 13 projects, totaling 112 hours of content**. Developed intermediate-level skills in Python programming, data manipulation, visualization, and machine learning using tools such as **Pandas, matplotlib, seaborn, scikit-learn, NumPy, Pingouin, statsmodels, and Git**, preparing for a career in data science.      
+> ***Completed*** the Data Science with Python Career Track by DataCamp, a comprehensive program comprising **30 courses and 13 projects**, totaling **112 hours of content**. Developed intermediate-level skills in Python programming, data manipulation, visualization, and machine learning using tools such as **Pandas, matplotlib, seaborn, scikit-learn, NumPy, Pingouin, statsmodels, and Git**, preparing for a career in data science.      
 **(30/30) Course Completed:**
 - Introduction to Python
 - [Intermediate Python](https://www.datacamp.com/completed/statement-of-accomplishment/course/674ecbe50a0234fdcbe391e43b86194dc10578d1)
@@ -68,7 +82,7 @@
 - Introduction to Git
 
 **[Data Analyst with Python (Career Track) - Datacamp]()**
-> Something
+> ***Completed*** the Data Analyst with Python Career Track by DataCamp, a comprehensive program consisting of **9 courses and 5 projects**, totaling **36 hours of content**. Developed foundational skills in hypothesis testing, data analysis, data manipulation, and data visualization using tools such as **Python, Matplotlib, Seaborn, Pandas, statsmodels, and Pingouin**. Prepared for entry-level roles in data analysis.
 - Introduction to Python
 - [Intermediate Python](https://www.datacamp.com/completed/statement-of-accomplishment/course/674ecbe50a0234fdcbe391e43b86194dc10578d1)
 - [Pandas: Data Manipulation](https://www.datacamp.com/completed/statement-of-accomplishment/course/b5a41c9e68617521b150e2f8516a1cb238cf465e)
