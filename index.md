@@ -5,7 +5,7 @@
 
 ### Summary
 
-- [Data Analytics by Google - Coursera](#data-analytics-by-google-coursera)
+> - [Data Analytics by Google - Coursera](#data-analytics-by-google-coursera)
 - [Advanced Data Analytics by Google - Coursera](#advanced-data-analytics-by-google-coursera)
 - [Deeplearning Specialization by Deeplearning.Ai - Coursera](#deeplearning-specialization-by-deeplearning.ai-coursera)
 - [Data Science with Python (Career Track) - Datacamp](#data-science-with-python-career-track-datacamp)
