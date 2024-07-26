@@ -2,6 +2,8 @@
 
 #### Technical Skills: Python, SQL, AWS, Snowflake, MATLAB
 
+## About Me
+
 ## Education
 - B.S., Statistics | Sebelas MAret University (_August 2022 - Present_)
 
