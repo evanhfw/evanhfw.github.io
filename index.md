@@ -18,7 +18,7 @@
 
 #### <a id="data-analytics-by-google-coursera"></a> **[Data Analytics by Google- Coursera](https://www.coursera.org/account/accomplishments/professional-cert/C8FRK8GEKAA8)**    
 > ***Completed*** the Google Data Analytics Professional Certificate, a thorough program requiring approximately **240 hours of coursework**. Developed foundational skills in **data collection, cleaning, analysis, and visualization** using tools such as **SQL, R, Tableau, and spreadsheets**. Achieved a strong understanding of data-driven decision making, preparing for entry-level roles in data analytics.     
-**(8/8) Course completed:**         
+**(8/8) Courses completed:**         
 - [Foundations: Data, Data, Everywhere](https://www.coursera.org/account/accomplishments/certificate/4XXUL533VS7R)
 - [Ask Questions to Make Data-Driven Decisions](https://www.coursera.org/account/accomplishments/certificate/4XXUL533VS7R)
 - [Prepare Data for Exploration](https://www.coursera.org/account/accomplishments/certificate/X8KU7K7QXZ9L)
@@ -30,7 +30,7 @@
 
 #### <a id="advanced-data-analytics-by-google-coursera"></a> **[Advanced Data Analytics by Google - Coursera](https://www.coursera.org/account/accomplishments/professional-cert/TZ2M5A7L4QPX)**     
 > ***Completed*** the Google Advanced Data Analytics Professional Certificate, a rigorous program requiring a substantial time commitment. Developed advanced skills in **data analysis, statistical methods, and machine learning** over approximately **150 hours of coursework**. Acquired expertise in advanced techniques using a comprehensive tech stack including **Python, SQL, TensorFlow, and BigQuery**. Prepared for higher-level roles in data analytics, capable of performing complex data-driven decision making and predictive modeling.     
-**(7/7) Course Completed:**
+**(7/7) Courses Completed:**
 - [Foundations of Data Science](https://www.coursera.org/account/accomplishments/certificate/L6A63QZ6NUDX)
 - [Get Started with Python](https://www.coursera.org/account/accomplishments/certificate/6MKWC6MDYJMT)
 - [Go Beyond the Numbers: Translate Data into Insights](https://www.coursera.org/account/accomplishments/certificate/3VYBWXRHPP7E)
@@ -42,14 +42,14 @@
 
 #### <a id="deeplearning-specialization-by-deeplearning.ai-coursera"></a> **[Deep Learning Specialization by Deeplearning.Ai - Coursera](https://www.coursera.org/specializations/deep-learning?courseAccomplishmentCurrentPage=1)**    
 > ***Currently progressing*** through the DeepLearning Specialization by DeepLearning.AI, a detailed program consisting of **5 courses** and requiring around **80 hours of coursework**. Developing advanced skills in neural networks, deep learning techniques, and AI model implementation using tools such as **TensorFlow and Keras**. Gaining a deep understanding of concepts like **neural networks, CNNs, RNNs, LSTMs**, and more, preparing for intermediate-level roles in artificial intelligence and machine learning.     
-**(3/5 Completed Course):**
+**(3/5 Courses Completed):**
 - [Neural Networks and Deep Learning](https://www.coursera.org/account/accomplishments/verify/ELMJLW7QLHZA)
 - [Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization](https://www.coursera.org/account/accomplishments/verify/HRAVAJ8TWN6W)
 - [Structuring Machine Learning Projects](https://www.coursera.org/account/accomplishments/records/SQH97UWT9JB4)
 
 #### <a id="data-science-with-python-career-track-datacamp"></a> **[Data Science with Python (Career Track) - Datacamp [X]](https://www.datacamp.com/completed/statement-of-accomplishment/track/98d42eefa1443c2e12e4e932581e80e486b54fc8)**      
 > ***Completed*** the Data Science with Python Career Track by DataCamp, a comprehensive program comprising **30 courses and 13 projects**, totaling **112 hours of content**. Developed intermediate-level skills in **Python programming, data manipulation, visualization, and machine learning** using tools such as **Pandas, matplotlib, seaborn, scikit-learn, NumPy, Pingouin, statsmodels, and Git**, preparing for a career in data science.      
-**(30/30) Course Completed:**
+**(30/30) Courses Completed:**
 - Introduction to Python
 - [Intermediate Python](https://www.datacamp.com/completed/statement-of-accomplishment/course/674ecbe50a0234fdcbe391e43b86194dc10578d1)
 - [Pandas: Data Manipulation](https://www.datacamp.com/completed/statement-of-accomplishment/course/b5a41c9e68617521b150e2f8516a1cb238cf465e)
@@ -83,7 +83,7 @@
 
 #### <a id="data-analyst-with-python-career-track-datacamp"></a> **[Data Analyst with Python (Career Track) - Datacamp[X]](https://www.datacamp.com/statement-of-accomplishment/track/6d44ee4e0f2316eeec8a4a12bfd00050fff3e2cb)**
 > ***Completed*** the Data Analyst with Python Career Track by DataCamp, a comprehensive program consisting of **9 courses and 5 projects**, totaling **36 hours of content**. Developed foundational skills in **hypothesis testing, data analysis, data manipulation, and data visualization** using tools such as **Python, Matplotlib, Seaborn, Pandas, statsmodels, and Pingouin**. Prepared for entry-level roles in data analysis.
-**(9/9) Course Completed:**
+**(9/9) Courses Completed:**
 - Introduction to Python
 - [Intermediate Python](https://www.datacamp.com/completed/statement-of-accomplishment/course/674ecbe50a0234fdcbe391e43b86194dc10578d1)
 - [Pandas: Data Manipulation](https://www.datacamp.com/completed/statement-of-accomplishment/course/b5a41c9e68617521b150e2f8516a1cb238cf465e)
@@ -96,7 +96,7 @@
 
 #### <a id="machine-learning-scientist-with-python-career-track-datacamp"></a> **[Machine Learning Scientist with Python (Career Track) - Datacamp](https://app.datacamp.com/learn/career-tracks/machine-learning-scientist-with-python)**
 > ***Currently progressing*** through the Machine Learning Scientist with Python Career Track by DataCamp, a comprehensive program consisting of **21 courses and 3 projects**, totaling **85 hours of content**. Developing intermediate-level skills in **end-to-end machine learning processes**, including **feature engineering, cross-validation, and hyperparameter tuning** using tools such as **Python, PyTorch, scikit-learn, XGBoost, and Pandas.** Preparing for roles focused on machine learning and data science.
-**(16/21) Course Completed:**
+**(16/21) Courses Completed:**
 - [scikit-learn: Supervised Learning](https://www.datacamp.com/completed/statement-of-accomplishment/course/8c0202c7ba065b4cf461d7babd52c789141637e4)
 - [Unsupervised Learning](https://www.datacamp.com/completed/statement-of-accomplishment/course/9023ed9716f3898af9bb26a3e3c81a62c54678c5)
 - [Linear Classifiers]
@@ -128,3 +128,9 @@
 
 #### <a id="data-scientist-dicoding"></a> [Data Scientist - Dicoding](https://www.dicoding.com/learningpaths/60)     
 > ***Currently progressing*** through the Data Scientist program by Dicoding, a comprehensive curriculum designed by expert teams in collaboration with industry practitioners. The program consists of **7 courses**, totaling **247 hours of content**, covering topics such as **basic data science, SQL, programming with Python, data analysis with Python, machine learning for beginners, machine learning development, and data science application.** Developing skills using tools such as **spreadsheets, Python, NumPy, Pandas, Seaborn, Matplotlib, scikit-learn, TensorFlow, Keras, and Streamlit.** Preparing for roles requiring beginner to advanced proficiency in data science and machine learning practices.
+**(5/7) Courses Completed**:
+- [Basic Data Science](https://www.dicoding.com/dicodingassets/coursecertificate/534af003a392cc6ff02a8effc669b68875f5db1b/view)
+- [Introduction to SQL](https://www.dicoding.com/certificates/07Z68MQQWXQR)
+- [Introduction to Programming with Python](https://www.dicoding.com/certificates/QLZ92V60EX5D)
+- [Introduction to Machine Learning](https://www.dicoding.com/certificates/JLX1L4KOGX72)
+- [Machine Learning Development](https://www.dicoding.com/certificates/RVZKKENWEZD5)
