@@ -1,11 +1,6 @@
----
-permalink: /certifications/
----
-
-
 # Certification Pages
 
-## **[Back to Homepage](evanhfw.github.io)
+## **[Back to Homepage](evanhfw.github.io)**
 
 ### Summary
 
