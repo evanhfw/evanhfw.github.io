@@ -5,7 +5,7 @@ permalink: /certifications/
 
 # Certification Pages
 
-## **[Back to Homepage](evanhfw.github.io)** (#TODO)
+## **[Back to Homepage](evanhfw.github.io)
 
 ### Summary
 
