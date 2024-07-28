@@ -11,4 +11,4 @@
 - B.S., Statistics | Sebelas MAret University (_August 2022 - Present_)
 
 ## Certification
-More than 70 certifications [here.]()
+More than 70 certifications [here.](https://evanhfw.github.io/certifications/)
