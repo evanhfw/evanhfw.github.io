@@ -1,5 +1,5 @@
 #### Technical Skills: Python, R, Tableau
-#### Expereince: Structured Data Modelling (Advanced), Unstructured Data Modelling (Beginner)
+#### Experience: Structured Data Modelling (Advanced), Unstructured Data Modelling (Beginner)
 
 ## Another Link:
 [[LinkedIn](https://www.linkedin.com/in/evanhanif/)] [[DataCamp](https://www.datacamp.com/portfolio/studiesevan)] [[Kaggle](https://www.kaggle.com/vnn777)]
