@@ -1,4 +1,4 @@
-#### Technical Skills: Python, R, Tableau
+#### Technical Skills: Python, R, Tableau         
 #### Experience: Structured Data Modelling (Advanced), Unstructured Data Modelling (Beginner)
 
 ## Another Link:
@@ -11,4 +11,4 @@
 - B.S., Statistics | Sebelas MAret University (_August 2022 - Present_)
 
 ## Certification
-More than 70 certifications [here.](https://evanhfw.github.io/certifications/)
+More than 90 certifications [here.](https://evanhfw.github.io/certifications/)
