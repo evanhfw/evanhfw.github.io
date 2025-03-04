@@ -5,7 +5,7 @@
   - **Unstructured Data**: Intermediate  
 
 ## **Profiles & Portfolio**  
-🔗 [**LinkedIn**](https://www.linkedin.com/in/evanhanif/) | [**DataCamp**](https://www.datacamp.com/portfolio/studiesevan) | [**Kaggle**](https://www.kaggle.com/vnn777) | [**Certifications**](https://evanhfw.github.io/certifications/)  
+🔗 [**LinkedIn**](https://www.linkedin.com/in/evanhanif/) | [**DataCamp**](https://www.datacamp.com/portfolio/studiesevan) | [**Kaggle**](https://www.kaggle.com/vnn777) | [**GitHub**](https://github.com/evanhfw) | [**Certifications**](https://evanhfw.github.io/certifications/)  
 
 ## **About Me**  
 Third-year Statistics student with multiple data science certifications, including Google's Advanced Data Analytics and DataCamp's Associate Data Scientist. Proficient in **Python** and experienced in handling **tabular data, time series data, and image data**. Familiar with frameworks such as **scikit-learn, XGBoost, PyTorch, SHAP**, and others. Holds **90+ certifications** and pursuing a career in **data science, data analytics, or machine learning engineering**.  
@@ -13,6 +13,12 @@ Third-year Statistics student with multiple data science certifications, includi
 ---
 
 ## **Experience**  
+
+### **Computer Vision Engineer Intern**  
+📍 **DataIns | PT Global Data Inspirasi** | **Dec 2024 - Present**  
+- Migrated object detection pipelines from **YOLOv10 to YOLOv11**, leveraging architectural advancements (e.g., improved backbone networks, enhanced anchor-free detection) to optimize inference speed and accuracy.  
+- Retrained models on domain-specific datasets, achieving **X% improvement** in [metric: mAP/FPS/precision].  
+- Developed a **computer vision-based system** integrating **object detection (YOLOv11) with optical flow/tracking algorithms** (e.g., OpenCV) to estimate vehicle speed from video streams.  
 
 ### **Research Assistant (Hybrid Machine Learning)**  
 📍 **Universitas Sebelas Maret** | **Jan 2025 - Present**  
