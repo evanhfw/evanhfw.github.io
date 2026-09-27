@@ -3,36 +3,36 @@ layout: default
 title: Uses
 ---
 <h2>🧰 /uses</h2>
-<p>Hardware, software, dan layanan yang kupakai sehari-hari. Terinspirasi dari <a href="https://uses.tech" target="_blank" rel="noopener">uses.tech</a>.</p>
+<p>Hardware, software, and services I use daily. Inspired by <a href="https://uses.tech" target="_blank" rel="noopener">uses.tech</a>.</p>
 
 <h3>🖥️ Hardware</h3>
 <ul>
-  <li><b>Home server "z6"</b> — AMD Ryzen 9 9900X, GTX 1660 Super, 15 GB RAM. Jantung homelab: semua container, pipeline CCTV, agent AI, dan situs ini.</li>
-  <li><b>Mini-PC</b> — Intel i3-1215U, node khusus analitik CCTV realtime (Frigate + face recognition).</li>
-  <li><b>STB Armbian</b> — single-board kecil di mesh sebagai controller tambahan.</li>
-  <li><b>VPS kecil (Tencent Cloud)</b> — 2 vCPU, satu-satunya pintu publik: reverse proxy, analytics, dan jalur masuk ke rumah.</li>
+  <li><b>z6 — mini-PC</b> (Intel i3-1215U, 16 GB RAM): the 24/7 node at home. All the containers, real-time CCTV analytics (Frigate + face recognition), the AI agents, and this website.</li>
+  <li><b>sumopod — small VPS</b> (Tencent Cloud, 2 vCPU / 4 GB RAM): the only public entry point — reverse proxy + Cloudflare, monitoring, analytics, LLM router.</li>
+  <li><b>armbian — STB</b> (Armbian Linux): Pi-hole for network-wide DNS + a power controller that wakes the workstation.</li>
+  <li><b>workstation — Ryzen 9 9900X</b> (32 GB RAM, GTX 1660 Super, Omarchy): on-demand compute for heavy workloads. Usually off, powered on when needed.</li>
 </ul>
 
 <h3>🧩 Software</h3>
 <ul>
-  <li><b>Ubuntu Linux</b> di semua node.</li>
-  <li><b>Docker + Compose</b> untuk semua layanan; <b>Caddy</b> sebagai reverse proxy dengan sertifikat otomatis.</li>
-  <li><b>Tailscale</b> — mesh VPN; layanan privat tidak pernah terekspos langsung ke internet.</li>
-  <li><b>Cloudflare</b> — DNS, edge, dan TLS untuk nama domain publik.</li>
-  <li><b>Python &amp; FastAPI</b> sehari-hari untuk ML dan backend; <b>Go</b> dan <b>Node.js</b> untuk proyek yang sedang tumbuh.</li>
-  <li><b>PostgreSQL</b> / <b>MySQL</b>, <b>Jekyll</b> (situs ini), <b>Umami</b> (analytics tanpa cookie pihak ketiga).</li>
-  <li><b>Hermes Agent</b> (Nous Research) — agent AI yang ikut mengurus infra ini, termasuk menulis halaman yang sedang kamu baca.</li>
+  <li><b>Ubuntu Linux</b> on every node.</li>
+  <li><b>Docker + Compose</b> for all services; <b>Caddy</b> as reverse proxy with automatic certificates.</li>
+  <li><b>Tailscale</b> — mesh VPN; private services are never exposed directly to the internet.</li>
+  <li><b>Cloudflare</b> — DNS, edge, and TLS for public domain names.</li>
+  <li><b>Python &amp; FastAPI</b> daily for ML and backend; <b>Go</b> and <b>Node.js</b> for projects that are growing.</li>
+  <li><b>PostgreSQL</b> / <b>MySQL</b>, <b>Jekyll</b> (this site), <b>Umami</b> (analytics without third-party cookies).</li>
+  <li><b>Hermes Agent</b> (Nous Research) — the AI agent that helps run this infrastructure, including writing the page you are reading.</li>
 </ul>
 
-<h3>🏠 Layanan homelab</h3>
+<h3>🏠 Homelab services</h3>
 <ul>
-  <li><b>Frigate + ArcFace</b> — deteksi orang &amp; face recognition dari CCTV, alert WhatsApp realtime.</li>
+  <li><b>Frigate + ArcFace</b> — person detection &amp; face recognition from CCTV, with real-time WhatsApp alerts.</li>
   <li><b>Jellyfin</b> — media server.</li>
-  <li><b>Paperless-ngx</b> — arsip dokumen.</li>
-  <li><b>Vaultwarden</b> — password manager self-hosted.</li>
-  <li><b>Uptime Kuma</b> — monitoring &amp; alert.</li>
-  <li><b>Honcho</b> — memori jangka panjang untuk agent AI-ku.</li>
-  <li><b>Umami</b> — analytics situs ini.</li>
+  <li><b>Paperless-ngx</b> — document archive.</li>
+  <li><b>Vaultwarden</b> — self-hosted password manager.</li>
+  <li><b>Uptime Kuma</b> — monitoring &amp; alerts.</li>
+  <li><b>Honcho</b> — long-term memory for my AI agents.</li>
+  <li><b>Umami</b> — analytics for this site.</li>
 </ul>
 
-<p><small>Daftar ini hidup. Terakhir diperbarui: <b>September 2026</b> (kamu bisa lihat status live-nya di <a href="/lab/">/lab</a>).</small></p>
+<p><small>This list is alive. Last updated: <b>September 2026</b> (you can see its live status at <a href="/lab/">/lab</a>).</small></p>

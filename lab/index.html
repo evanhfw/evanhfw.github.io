@@ -3,24 +3,45 @@ layout: default
 title: Lab
 ---
 <h2>🖥️ /lab — live homelab</h2>
-<p>Situs ini jalan di homelab-ku sendiri (server rumah + VPS kecil, terhubung mesh VPN). Angka di bawah diambil live dan refresh tiap 30 detik.</p>
+<p>Four nodes: a mini-PC at home (24/7), a small public VPS, an STB running DNS + power control, and an on-demand workstation. Everything below is live and refreshes every 30 seconds.</p>
 
-<div id="lab">memuat…</div>
+<div id="lab">loading…</div>
 
 <style>
-.lab-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin: 14px 0; }
-.lab-card { border: 1px solid rgba(128,128,128,.35); border-radius: 8px; padding: 10px 12px; background: rgba(128,128,128,.06); }
-.lab-card .k { font-size: 12px; opacity: .75; margin-bottom: 4px; }
-.lab-card .v { font-weight: 700; }
-.lab-table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+.lab-nodes { display: grid; grid-template-columns: repeat(auto-fit, minmax(215px, 1fr)); gap: 10px; margin: 14px 0; }
+.node { border: 1px solid rgba(128,128,128,.35); border-radius: 10px; padding: 12px 14px; background: rgba(128,128,128,.06); }
+.node.off { opacity: .65; }
+.node .head { display: flex; align-items: center; gap: 8px; margin-bottom: 2px; flex-wrap: wrap; }
+.node .dot { width: 9px; height: 9px; border-radius: 50%; background: #c04848; display: inline-block; flex: none; }
+.node.on .dot { background: #3fae62; }
+.node .role { font-size: 12px; opacity: .7; }
+.node .spec { font-size: 12.5px; opacity: .85; margin: 6px 0 4px; }
+.node .nums { font-size: 12.5px; }
+.node .err { font-size: 12px; color: #c04848; }
+.lab-table { width: 100%; border-collapse: collapse; margin: 8px 0 16px; }
 .lab-table th, .lab-table td { text-align: left; padding: 6px 10px; border-bottom: 1px solid rgba(128,128,128,.3); }
 .lab-table th { font-size: 12px; opacity: .75; text-transform: uppercase; letter-spacing: .04em; }
+.lab-h { margin: 16px 0 4px; font-size: 15px; }
 </style>
 
 <script>
 function fmtUptime(s) {
   const d = Math.floor(s / 86400), h = Math.floor((s % 86400) / 3600);
-  return d + ' hari ' + h + ' jam';
+  return d + 'd ' + h + 'h';
+}
+function nodeCard(n) {
+  const nums = [];
+  if (n.load1 != null) nums.push('load ' + n.load1.toFixed(2));
+  if (n.mem_total_mb && n.mem_available_mb != null) nums.push('RAM ' + Math.round(100 * (1 - n.mem_available_mb / n.mem_total_mb)) + '% · ' + n.mem_available_mb + ' MB free');
+  else if (n.mem_total_mb) nums.push(n.mem_total_mb + ' MB RAM');
+  if (n.uptime_seconds) nums.push('up ' + fmtUptime(n.uptime_seconds));
+  if (n.containers_running != null) nums.push(n.containers_running + ' containers');
+  return '<div class="node ' + (n.online ? 'on' : 'off') + '">' +
+    '<div class="head"><span class="dot"></span><b>' + n.label + '</b><span class="role">' + n.role + '</span></div>' +
+    '<div class="spec">' + n.spec + '</div>' +
+    (nums.length ? '<div class="nums">' + nums.join(' · ') + '</div>' : '') +
+    (n.error ? '<div class="err">' + n.error + '</div>' : '') +
+    '</div>';
 }
 async function load() {
   const el = document.getElementById('lab');
@@ -28,25 +49,24 @@ async function load() {
     const r = await fetch('/api/lab');
     if (!r.ok) throw new Error('http ' + r.status);
     const d = await r.json();
-    const n = d.node || {}, c = d.containers || {};
-    const memPct = n.mem_total_mb ? Math.round(100 * (1 - n.mem_available_mb / n.mem_total_mb)) : null;
-    el.innerHTML = `
-      <div class="lab-cards">
-        <div class="lab-card"><div class="k">Node · home server</div><div class="v">${n.cpu_count ?? '?'} CPU · load ${n.load1?.toFixed(2) ?? '?'}</div></div>
-        <div class="lab-card"><div class="k">RAM terpakai</div><div class="v">${memPct != null ? memPct + '% (' + n.mem_available_mb + ' MB free)' : '?'}</div></div>
-        <div class="lab-card"><div class="k">Uptime node</div><div class="v">${n.uptime_seconds ? fmtUptime(n.uptime_seconds) : '?'}</div></div>
-        <div class="lab-card"><div class="k">Container Docker</div><div class="v">${c.running ?? '?'} running / ${c.total ?? '?'}</div></div>
-      </div>
-      <h3>Layanan</h3>
-      <table class="lab-table">
-        <thead><tr><th>Layanan</th><th>Status</th><th>Respons</th></tr></thead>
-        <tbody>
-          ${(d.checks || []).map(x => `<tr><td>${x.name}</td><td>${x.ok ? '🟢 up' : '🔴 down'}</td><td>${x.code || '—'} · ${x.ms} ms</td></tr>`).join('')}
-        </tbody>
-      </table>
-      <p><small>diperbarui ${new Date(d.updated_at).toLocaleTimeString()} · auto-refresh 30s · data dari <code>/api/lab</code></small></p>`;
+    const groups = {};
+    for (const c of (d.checks || [])) (groups[c.host] = groups[c.host] || []).push(c);
+    const order = ['z6', 'sumopod', 'armbian'];
+    const tables = order.filter(function (h) { return groups[h]; }).map(function (h) {
+      return '<div class="lab-h">' + h + '</div>' +
+        '<table class="lab-table"><thead><tr><th>Service</th><th>Status</th><th>Response</th></tr></thead><tbody>' +
+        groups[h].map(function (x) {
+          return '<tr><td>' + x.name + '</td><td>' + (x.ok ? '🟢 up' : '🔴 down') + '</td><td>' + (x.code || '—') + ' · ' + x.ms + ' ms</td></tr>';
+        }).join('') +
+        '</tbody></table>';
+    }).join('');
+    el.innerHTML =
+      '<div class="lab-nodes">' + (d.nodes || []).map(nodeCard).join('') + '</div>' +
+      tables +
+      '<p><small>updated ' + new Date(d.updated_at).toLocaleTimeString() +
+      ' · auto-refresh 30s · the workstation is usually off (powered on only when heavy compute is needed)</small></p>';
   } catch (e) {
-    el.textContent = 'Gagal memuat data lab — coba refresh sebentar lagi.';
+    el.textContent = 'Could not load lab data — try refreshing in a moment.';
   }
 }
 load();

@@ -3,7 +3,7 @@ layout: default
 title: Terminal
 ---
 <h2>💻 /terminal</h2>
-<p>Mini-shell buat jelajah situs ini. Ketik <code>help</code> untuk daftar perintah.</p>
+<p>A mini-shell to explore this site. Type <code>help</code> for the command list.</p>
 
 <div id="term">
   <div id="term-out" aria-live="polite"></div>
@@ -34,48 +34,48 @@ title: Terminal
   const wt = (text, cls) => { const d = document.createElement('div'); if (cls) d.className = cls; d.textContent = text; out.appendChild(d); };
 
   const pages = {
-    home:  { url: '/',                desc: 'profil, pengalaman, proyek, blog' },
-    blog:  { url: '/blog/',           desc: 'tulisan teknis (self-hosting, CV, dsb.)' },
-    certs: { url: '/certifications/', desc: 'daftar lengkap sertifikasi' },
-    chat:  { url: '/chat/',           desc: 'tanya AI soal Evan' },
-    lab:   { url: '/lab/',            desc: 'status live homelab ini' },
-    uses:  { url: '/uses/',           desc: 'hardware & software yang dipakai' },
+    home:  { url: '/',                desc: 'profile, experience, projects, blog' },
+    blog:  { url: '/blog/',           desc: 'writing (self-hosting, CV, etc.)' },
+    certs: { url: '/certifications/', desc: 'full certification list' },
+    chat:  { url: '/chat/',           desc: 'ask AI about Evan' },
+    lab:   { url: '/lab/',            desc: 'live homelab status' },
+    uses:  { url: '/uses/',           desc: 'hardware & software I use' },
   };
 
   const P = (t) => `<span class="dim">${t}</span>`;
 
   const commands = {
     help: () => w(
-      'Perintah yang tersedia:\n' +
-      '  help            bantuan ini\n' +
-      '  whoami          siapa pemilik situs ini\n' +
-      '  about           ringkasan singkat\n' +
-      '  experience      pengalaman kerja\n' +
-      '  projects        proyek pilihan\n' +
-      '  skills          skill utama\n' +
-      '  contact         kontak\n' +
-      '  ls              daftar halaman situs\n' +
-      '  cat &lt;halaman&gt;   ringkasan halaman\n' +
-      '  open &lt;halaman&gt;  buka halaman\n' +
-      '  neofetch        info "sistem"\n' +
-      '  clear           bersihkan layar'),
+      'Available commands:\n' +
+      '  help            this help\n' +
+      '  whoami          who owns this site\n' +
+      '  about           short summary\n' +
+      '  experience      work experience\n' +
+      '  projects        selected projects\n' +
+      '  skills          core skills\n' +
+      '  contact         contact info\n' +
+      '  ls              list site pages\n' +
+      '  cat &lt;page&gt;      page summary\n' +
+      '  open &lt;page&gt;     open a page\n' +
+      '  neofetch        "system" info\n' +
+      '  clear           clear the screen'),
     whoami: () => w('evan — AI Engineer\nComputer Vision · ML · Backend · Surakarta, Indonesia\n' + P('“Every day you may make progress.”')),
     about: () => w(
-      'AI Engineer di rubythalib.ai, ditempatkan ke Sinarmas\n' +
-      'Mining / PT Borneo Indobara untuk sistem AI produksi\n' +
-      'di operasi keselamatan tambang.\n' +
-      'Face recognition 0% → 97% · OCR plat 60% → 94%\n' +
-      'RAM Jetson 24GB → 8GB'),
+      'AI Engineer at rubythalib.ai, deployed to Sinarmas\n' +
+      'Mining / PT Borneo Indobara for production AI in\n' +
+      'mining safety operations.\n' +
+      'Face recognition 0% → 97% · OCR 60% → 94%\n' +
+      'Jetson RAM 24GB → 8GB'),
     experience: () => w(
       'AI Engineer        rubythalib.ai     May 2026 – now\n' +
       'AI Engineer Intern rubythalib.ai     Oct 2025 – Apr 2026\n' +
       'Research Assistant UNS Surakarta     Dec 2024 – Jul 2026\n' +
       'CV Engineer Intern DataIns           Dec 2024 – Apr 2025'),
     projects: () => w(
-      'hireonai.web.id  portal kerja AI (founder)\n' +
-      'dicodex          dashboard bootcamp (1.000+ users)\n' +
-      'visionai         platform CCTV (clean architecture)\n' +
-      'homelab          infra self-hosted (situs ini dari sini)'),
+      'hireonai.web.id  AI job portal (founder)\n' +
+      'dicodex          bootcamp analytics (1,000+ users)\n' +
+      'visionai         CCTV analytics (clean architecture)\n' +
+      'homelab          self-hosted infra (this site runs here)'),
     skills: () => w(
       'ML & Data      Python · Computer Vision · YOLO ·\n' +
       '               DeepFace · XGBoost · Time Series ·\n' +
@@ -88,23 +88,23 @@ title: Terminal
     ls: () => w(Object.entries(pages).map(([k, v]) => `  ${k.padEnd(9)} ${v.desc}`).join('\n')),
     cat: (arg) => {
       const p = pages[arg];
-      return p ? w(`${arg}/  — ${p.desc}\n` + `buka dengan: open ${arg}`) : w(`tidak ada halaman "${arg}" — coba: ls`, 'err');
+      return p ? w(`${arg}/  — ${p.desc}\n` + `open it with: open ${arg}`) : w(`no such page "${arg}" — try: ls`, 'err');
     },
     open: (arg) => {
       const p = pages[arg];
-      if (p) { wt(`membuka ${p.url} …`, 'dim'); setTimeout(() => { location.href = p.url; }, 350); }
-      else w(`tidak ada halaman "${arg}" — coba: ls`, 'err');
+      if (p) { wt(`opening ${p.url} …`, 'dim'); setTimeout(() => { location.href = p.url; }, 350); }
+      else w(`no such page "${arg}" — try: ls`, 'err');
     },
     neofetch: () => w(
       '    .---.      evan@my-name-is\n' +
-      '   / o o \\     -----------------------\n' +
-      '   \\ _^_ /     host    : my-name-is.evanhfw.my.id\n' +
+      '   / o o \\\\     -----------------------\n' +
+      '   \\\\ _^_ /     host    : my-name-is.evanhfw.my.id\n' +
       '    `---`      engine  : Jekyll + nginx (self-hosted)\n' +
       '               shell   : mini-shell v1\n' +
-      '               uptime  : lihat /lab\n' +
-      '               memory  : Honcho + Umami + lainnya'),
-    sudo: () => w('Nice try. 😄 ' + P('kamu bukan root di sini')),
-    exit: () => w('Tidak bisa keluar dari sini — tapi bisa kok ke ' + '<a href="/">/</a>.'),
+      '               uptime  : see /lab\n' +
+      '               memory  : Honcho + Umami + more'),
+    sudo: () => w('Nice try. 😄 ' + P("you're not root here")),
+    exit: () => w("You can't log out — but you can go to " + '<a href="/">/</a>.'),
     ping: () => w('pong'),
     clear: () => { out.innerHTML = ''; },
   };
@@ -116,7 +116,7 @@ title: Terminal
     const [cmd, ...rest] = line.split(/\s+/);
     const fn = commands[cmd.toLowerCase()];
     if (fn) { fn(rest.join(' ').toLowerCase()); }
-    else { wt(`perintah tidak dikenal: ${cmd} — ketik help`, 'err'); }
+    else { wt(`unknown command: ${cmd} — type help`, 'err'); }
     out.lastElementChild?.scrollIntoView({ block: 'nearest' });
   }
 
@@ -136,7 +136,7 @@ title: Terminal
   });
   term.addEventListener('click', () => input.focus());
 
-  w('<span class="dim">mini-shell siap. Ketik `help` untuk mulai.</span>');
+  w('<span class="dim">mini-shell ready. Type `help` to get started.</span>');
   input.focus();
 })();
 </script>
