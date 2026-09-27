@@ -31,9 +31,10 @@ function fmtUptime(s) {
 }
 function nodeCard(n) {
   const nums = [];
+  if (n.cpu_pct != null) nums.push('CPU ' + Math.round(n.cpu_pct) + '%');
   if (n.load1 != null) nums.push('load ' + n.load1.toFixed(2));
-  if (n.mem_total_mb && n.mem_available_mb != null) nums.push('RAM ' + Math.round(100 * (1 - n.mem_available_mb / n.mem_total_mb)) + '% · ' + n.mem_available_mb + ' MB free');
-  else if (n.mem_total_mb) nums.push(n.mem_total_mb + ' MB RAM');
+  if (n.mem_pct != null) nums.push('RAM ' + Math.round(n.mem_pct) + '%' + (n.mem_used_gb != null && n.mem_total_gb != null ? ' · ' + n.mem_used_gb + '/' + n.mem_total_gb + ' GB' : ''));
+  if (n.disk_pct != null) nums.push('disk ' + Math.round(n.disk_pct) + '%' + (n.disk_used_gb != null && n.disk_total_gb != null ? ' · ' + n.disk_used_gb + '/' + n.disk_total_gb + ' GB' : ''));
   if (n.uptime_seconds) nums.push('up ' + fmtUptime(n.uptime_seconds));
   if (n.containers_running != null) nums.push(n.containers_running + ' containers');
   return '<div class="node ' + (n.online ? 'on' : 'off') + '">' +
