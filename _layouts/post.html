@@ -6,7 +6,7 @@ layout: default
   <h1>{{ page.title }}</h1>
   {% assign words = content | strip_html | number_of_words %}
   {% assign minutes = words | divided_by: 200 | plus: 1 %}
-  <p class="post-meta">{{ page.date | date: "%-d %b %Y" }} · {{ minutes }} min read{% if page.tags.size > 0 %} {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% unless forloop.last %} {% endunless %}{% endfor %}{% endif %}</p>
+  <p class="post-meta">{{ page.date | date: "%-d %b %Y" }} · {{ minutes }} min read{% if page.tags.size > 0 %} {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% unless forloop.last %}{{ " " }}{% endunless %}{% endfor %}{% endif %}</p>
 </div>
 
 <div class="post-body">
