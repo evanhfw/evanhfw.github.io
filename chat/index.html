@@ -48,6 +48,19 @@ title: Ask AI
 
   add("🤖 Hai! Tanya apa saja soal pengalaman, skill, dan proyek Evan — English atau Indonesia.", 'bot');
 
+  // Kill switch backend (CHAT_ENABLED=0) -> tampilkan notice, sembunyikan form.
+  fetch('/api/chat/status')
+    .then((r) => r.json())
+    .then((j) => {
+      if (j && j.enabled === false) {
+        log.innerHTML = '';
+        add('🤖 Chat AI sedang dimatikan sementara oleh pemilik situs. Coba lagi nanti, atau hubungi Evan langsung lewat email.', 'bot');
+        form.style.display = 'none';
+        document.getElementById('chat-hint').style.display = 'none';
+      }
+    })
+    .catch(() => {});
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const q = input.value.trim();
