@@ -14,9 +14,9 @@ The path from a visitor to the content looks like this:
 
 ```
 Cloudflare (DNS + edge)
-  -> VPS: Caddy             (public entry point, Let's Encrypt certs via DNS-01)
-    -> Tailscale mesh       (private network between my machines)
-      -> home server: nginx (serves the static build of this Jekyll site)
+  -> VPS: Caddy          (public entry, TLS via DNS-01)
+    -> Tailscale mesh    (private network between machines)
+      -> home nginx      (serves this static Jekyll build)
 ```
 
 What each hop does:

@@ -1,9 +1,21 @@
 ---
 layout: default
 ---
-<p><small><a href="/blog/">← All posts</a></small></p>
+<div class="post-header">
+  <p class="back-link"><a href="/blog/">← All posts</a></p>
+  <h1>{{ page.title }}</h1>
+  {% assign words = content | strip_html | number_of_words %}
+  {% assign minutes = words | divided_by: 200 | plus: 1 %}
+  <p class="post-meta">{{ page.date | date: "%-d %b %Y" }} · {{ minutes }} min read{% if page.tags.size > 0 %} {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% unless forloop.last %} {% endunless %}{% endfor %}{% endif %}</p>
+</div>
 
-<h1>{{ page.title }}</h1>
-<p><small>{{ page.date | date: "%-d %b %Y" }}{% if page.tags %} · {{ page.tags | join: ", " }}{% endif %}</small></p>
-
+<div class="post-body">
 {{ content }}
+</div>
+
+{% if page.previous or page.next %}
+<nav class="post-nav">
+  <span>{% if page.previous %}<a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>{% endif %}</span>
+  <span>{% if page.next %}<a href="{{ page.next.url }}">{{ page.next.title }} →</a>{% endif %}</span>
+</nav>
+{% endif %}
