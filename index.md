@@ -1,7 +1,7 @@
 ---
 layout: default
 title: AI Engineer
-image: /assets/img/og-card.jpg
+image: /assets/img/og-card.jpg?v=2
 ---
 
 ## **About Me**
@@ -12,7 +12,7 @@ Currently an **AI Engineer at rubythalib.ai**, deployed to **Sinarmas Mining / P
 ## **Profiles & Portfolio**
 🔗 [**LinkedIn**](https://www.linkedin.com/in/evanhanif/) | [**GitHub**](https://github.com/evanhfw) | [**DataCamp**](https://www.datacamp.com/portfolio/studiesevan) | [**Kaggle**](https://www.kaggle.com/vnn777) | [**Blog**](/blog/) | [**Certifications**](/certifications/) | [**Email**](mailto:evan.hanif.w@gmail.com)
 
-📍 Surakarta, Indonesia
+📍 Semarang, Indonesia
 
 🧪 **Playground:** [Ask AI](/chat/) · [Lab](/lab/) · [Terminal](/terminal/) · [Uses](/uses/)
 

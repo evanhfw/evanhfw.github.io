@@ -10,12 +10,14 @@ title: Uses
   <li><b>z6 — mini-PC</b> (Intel i3-1215U, 16 GB RAM): the 24/7 node at home. All the containers, real-time CCTV analytics (Frigate + face recognition), the AI agents, and this website.</li>
   <li><b>sumopod — small VPS</b> (Tencent Cloud, 2 vCPU / 4 GB RAM): the only public entry point — reverse proxy + Cloudflare, monitoring, analytics, LLM router.</li>
   <li><b>armbian — STB</b> (Armbian Linux): Pi-hole for network-wide DNS + a power controller that wakes the workstation.</li>
-  <li><b>workstation — Ryzen 9 9900X</b> (32 GB RAM, GTX 1660 Super, Omarchy): on-demand compute for heavy workloads. Usually off, powered on when needed.</li>
+  <li><b>workstation — Ryzen 9 9900X</b> (32 GB RAM, GTX 1660 Super): runs <b>Omarchy</b> (Arch-based), my on-demand compute for heavy workloads. Usually off, powered on when needed.</li>
+  <li><b>MacBook Neo</b> (macOS) — my daily driver when I'm mobile.</li>
 </ul>
 
 <h3>🧩 Software</h3>
 <ul>
-  <li><b>Ubuntu Linux</b> on every node.</li>
+  <li><b>Terminal-first, all day:</b> <b>Ghostty</b> as the terminal, <b>LazyVim</b> (Neovim) as the IDE, and <b>herdr</b> as the terminal workspace manager that runs my AI coding agents and dev sessions. I basically live in the terminal.</li>
+  <li><b>Linux everywhere:</b> Ubuntu on z6, OpenCloudOS on the VPS, Armbian on the STB, Omarchy (Arch-based) on the workstation.</li>
   <li><b>Docker + Compose</b> for all services; <b>Caddy</b> as reverse proxy with automatic certificates.</li>
   <li><b>Tailscale</b> — mesh VPN; private services are never exposed directly to the internet.</li>
   <li><b>Cloudflare</b> — DNS, edge, and TLS for public domain names.</li>
