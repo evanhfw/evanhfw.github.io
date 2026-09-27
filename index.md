@@ -10,7 +10,7 @@ AI Engineer focused on delivering production-ready AI systems with strong backen
 Currently an **AI Engineer at rubythalib.ai**, deployed to **Sinarmas Mining / PT Borneo Indobara**, building production AI systems for mining safety operations.
 
 ## **Profiles & Portfolio**
-🔗 [**LinkedIn**](https://www.linkedin.com/in/evanhanif/) | [**GitHub**](https://github.com/evanhfw) | [**DataCamp**](https://www.datacamp.com/portfolio/studiesevan) | [**Kaggle**](https://www.kaggle.com/vnn777) | [**Certifications**](/certifications/) | [**Email**](mailto:evan.hanif.w@gmail.com)
+🔗 [**LinkedIn**](https://www.linkedin.com/in/evanhanif/) | [**GitHub**](https://github.com/evanhfw) | [**DataCamp**](https://www.datacamp.com/portfolio/studiesevan) | [**Kaggle**](https://www.kaggle.com/vnn777) | [**Blog**](/blog/) | [**Certifications**](/certifications/) | [**Email**](mailto:evan.hanif.w@gmail.com)
 
 📍 Surakarta, Indonesia
 

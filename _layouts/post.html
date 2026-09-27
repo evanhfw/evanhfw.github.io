@@ -1,0 +1,9 @@
+---
+layout: default
+---
+<p><small><a href="/blog/">← All posts</a></small></p>
+
+<h1>{{ page.title }}</h1>
+<p><small>{{ page.date | date: "%-d %b %Y" }}{% if page.tags %} · {{ page.tags | join: ", " }}{% endif %}</small></p>
+
+{{ content }}

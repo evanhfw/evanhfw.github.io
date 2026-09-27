@@ -4,6 +4,8 @@ description: AI Engineer | Computer Vision, ML & Backend
 # show_downloads: true
 theme: jekyll-theme-minimal
 url: https://my-name-is.evanhfw.my.id
+permalink: /blog/:title/
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-feed

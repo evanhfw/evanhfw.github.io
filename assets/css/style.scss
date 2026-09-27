@@ -1,0 +1,56 @@
+---
+---
+@import "jekyll-theme-minimal";
+
+/* --- Dark mode (mengikuti prefers-color-scheme) --- */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #101418;
+    color: #b4bcc6;
+  }
+  h1, h2, h3, h4, h5, h6 { color: #e8eaed; }
+  h2 { color: #dce0e5; }
+  h3, h4, h5, h6 { color: #cbd1d8; }
+  strong { color: #e8eaed; }
+  a { color: #63b3e6; }
+  a:hover, a:focus { color: #8ccbf2; }
+  a small, a:hover small { color: #8b949e; }
+  code, pre { color: #c9ced6; }
+  pre { background: #171c22; border-color: #232a31; }
+  blockquote { border-left-color: #2b3239; }
+  hr { background: #232a31; }
+  th, td { border-bottom-color: #232a31; }
+  th, dt { color: #cbd1d8; }
+  kbd {
+    background-color: #1b2129;
+    border-color: #303943;
+    border-bottom-color: #3d4854;
+    box-shadow: inset 0 -1px 0 #3d4854;
+    color: #c9ced6;
+  }
+  .highlight { background-color: #171c22; }
+
+  /* Rouge (syntax highlight) untuk latar gelap, gaya GitHub dark */
+  .highlight .c, .highlight .cd, .highlight .cm, .highlight .c1,
+  .highlight .cs, .highlight .gh, .highlight .gu, .highlight .bp,
+  .highlight .go, .highlight .gp { color: #8b949e; }
+  .highlight .err { color: #ffa198; background-color: #2b1418; }
+  .highlight .gd { color: #f0f0f0; background-color: #3a1d1f; }
+  .highlight .gi { color: #f0f0f0; background-color: #1c3a24; }
+  .highlight .gr, .highlight .gt { color: #ffa198; }
+  .highlight .k, .highlight .kc, .highlight .kd, .highlight .kn,
+  .highlight .kp, .highlight .kr, .highlight .kt, .highlight .o,
+  .highlight .ow, .highlight .nn { color: #ff7b72; }
+  .highlight .s, .highlight .s1, .highlight .s2, .highlight .sb,
+  .highlight .sc, .highlight .sd, .highlight .se, .highlight .sh,
+  .highlight .si, .highlight .sr, .highlight .sx { color: #a5d6ff; }
+  .highlight .ss { color: #d2a8ff; }
+  .highlight .m, .highlight .mb, .highlight .mf, .highlight .mh,
+  .highlight .mi, .highlight .mo, .highlight .mx, .highlight .il { color: #79c0ff; }
+  .highlight .nf, .highlight .ne, .highlight .nl, .highlight .nd { color: #d2a8ff; }
+  .highlight .na, .highlight .nb, .highlight .nt { color: #7ee787; }
+  .highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi { color: #ffa657; }
+  .highlight .no { color: #79c0ff; }
+  .highlight .w { color: #484f58; }
+  .highlight .ge { color: #8b949e; font-style: italic; }
+}
