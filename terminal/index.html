@@ -6,13 +6,13 @@ title: Terminal
 <p>Mini-shell buat jelajah situs ini. Ketik <code>help</code> untuk daftar perintah.</p>
 
 <div id="term">
-  <div id="term-out"></div>
+  <div id="term-out" aria-live="polite"></div>
   <div id="term-line"><span class="prompt">evan@my-name-is:~$</span> <input id="term-in" autocomplete="off" spellcheck="false" /></div>
 </div>
 
 <style>
 #term { background: rgba(18,20,23,.94); color: #d7dde5; border: 1px solid rgba(128,128,128,.4); border-radius: 8px; padding: 14px 16px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size: 13.5px; cursor: text; }
-#term-out { white-space: pre-wrap; line-height: 1.55; }
+#term-out { white-space: pre; overflow-x: auto; line-height: 1.55; }
 #term-out a { color: #6cb6e0; }
 #term-out .cmd { color: #8fd3ff; }
 #term-out .err { color: #ff9c9c; }
@@ -59,26 +59,29 @@ title: Terminal
       '  open &lt;halaman&gt;  buka halaman\n' +
       '  neofetch        info "sistem"\n' +
       '  clear           bersihkan layar'),
-    whoami: () => w('evan — AI Engineer (Computer Vision · ML · Backend), Surakarta, Indonesia.\n' + P('“Every day you may make progress.”')),
+    whoami: () => w('evan — AI Engineer\nComputer Vision · ML · Backend · Surakarta, Indonesia\n' + P('“Every day you may make progress.”')),
     about: () => w(
-      'AI Engineer di rubythalib.ai, ditempatkan ke Sinarmas Mining / PT Borneo Indobara\n' +
-      'untuk sistem AI produksi di operasi keselamatan tambang.\n' +
-      'Face recognition 0% → 97% · OCR plat truk 60% → 94% · RAM Jetson 24GB → 8GB.'),
+      'AI Engineer di rubythalib.ai, ditempatkan ke Sinarmas\n' +
+      'Mining / PT Borneo Indobara untuk sistem AI produksi\n' +
+      'di operasi keselamatan tambang.\n' +
+      'Face recognition 0% → 97% · OCR plat 60% → 94%\n' +
+      'RAM Jetson 24GB → 8GB'),
     experience: () => w(
-      'AI Engineer         rubythalib.ai            May 2026 – sekarang\n' +
-      'AI Engineer Intern  rubythalib.ai            Okt 2025 – Apr 2026\n' +
-      'Research Assistant  Universitas Sebelas Maret Des 2024 – Jul 2026\n' +
-      'CV Engineer Intern  DataIns                  Des 2024 – Apr 2025'),
+      'AI Engineer        rubythalib.ai     May 2026 – now\n' +
+      'AI Engineer Intern rubythalib.ai     Oct 2025 – Apr 2026\n' +
+      'Research Assistant UNS Surakarta     Dec 2024 – Jul 2026\n' +
+      'CV Engineer Intern DataIns           Dec 2024 – Apr 2025'),
     projects: () => w(
-      'hireonai.web.id    portal kerja AI (founder & product lead)\n' +
-      'dicodex            dashboard analytics bootcamp (1.000+ pemakai)\n' +
-      'visionai           platform analitik CCTV (clean architecture)\n' +
-      'homelab            infra self-hosted 4 node — situs ini salah satu isinya'),
+      'hireonai.web.id  portal kerja AI (founder)\n' +
+      'dicodex          dashboard bootcamp (1.000+ users)\n' +
+      'visionai         platform CCTV (clean architecture)\n' +
+      'homelab          infra self-hosted (situs ini dari sini)'),
     skills: () => w(
-      'ML & Data      Python · Computer Vision · YOLO · DeepFace · XGBoost ·\n' +
-      '               Time Series · LLM & RAG · ChromaDB\n' +
-      'Backend/Infra  FastAPI · Go · Node.js · Docker · Linux · PostgreSQL ·\n' +
-      '               MySQL · CI/CD · GCP'),
+      'ML & Data      Python · Computer Vision · YOLO ·\n' +
+      '               DeepFace · XGBoost · Time Series ·\n' +
+      '               LLM & RAG · ChromaDB\n' +
+      'Backend/Infra  FastAPI · Go · Node.js · Docker ·\n' +
+      '               Linux · PostgreSQL/MySQL · CI/CD · GCP'),
     contact: () => w('email      <a href="mailto:evan.hanif.w@gmail.com">evan.hanif.w@gmail.com</a>\n' +
                      'linkedin   <a href="https://www.linkedin.com/in/evanhanif/" target="_blank" rel="noopener">linkedin.com/in/evanhanif</a>\n' +
                      'github     <a href="https://github.com/evanhfw" target="_blank" rel="noopener">github.com/evanhfw</a>'),
@@ -93,14 +96,14 @@ title: Terminal
       else w(`tidak ada halaman "${arg}" — coba: ls`, 'err');
     },
     neofetch: () => w(
-      '   ▄▄▄▄▄▄▄▄▄▄▄▄     evan@my-name-is\n' +
-      '  █ ▄▄▄▄▄▄▄▄▄▄ █    ───────────────────────────\n' +
-      '  █ █ ●    ● █ █    host    : my-name-is.evanhfw.my.id\n' +
-      '  █ █   ▁▁   █ █    engine  : Jekyll + nginx (self-hosted)\n' +
-      '  █ ▀▀▀▀▀▀▀▀▀▀ █    shell   : mini-shell v1\n' +
-      '   ▀▀▀▀▀▀▀▀▀▀▀▀     uptime  : lihat /lab\n' +
-      '                   memory  : Honcho + Umami + lebih banyak lagi'),
-    sudo: () => w('Nice try. 😄 ' + P('(kamu bukan root di sini — tapi kamu boleh lihat-lihat)')),
+      '    .---.      evan@my-name-is\n' +
+      '   / o o \\     -----------------------\n' +
+      '   \\ _^_ /     host    : my-name-is.evanhfw.my.id\n' +
+      '    `---`      engine  : Jekyll + nginx (self-hosted)\n' +
+      '               shell   : mini-shell v1\n' +
+      '               uptime  : lihat /lab\n' +
+      '               memory  : Honcho + Umami + lainnya'),
+    sudo: () => w('Nice try. 😄 ' + P('kamu bukan root di sini')),
     exit: () => w('Tidak bisa keluar dari sini — tapi bisa kok ke ' + '<a href="/">/</a>.'),
     ping: () => w('pong'),
     clear: () => { out.innerHTML = ''; },

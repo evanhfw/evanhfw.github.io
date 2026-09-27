@@ -24,7 +24,8 @@ title: Ask AI
 .msg.pending { opacity: .55; }
 #chat-form { display: flex; gap: 8px; }
 #chat-input { flex: 1; padding: 9px 11px; border-radius: 6px; border: 1px solid rgba(128,128,128,.45); background: transparent; color: inherit; font: inherit; }
-#chat-send { padding: 9px 16px; border-radius: 6px; border: 1px solid rgba(38,124,185,.6); background: rgba(38,124,185,.15); color: inherit; font: inherit; cursor: pointer; }
+#chat-send { padding: 9px 16px; border-radius: 6px; border: 1px solid rgba(38,124,185,.9); background: rgba(38,124,185,.85); color: #fff; font: inherit; cursor: pointer; }
+#chat-send:hover { background: rgba(38,124,185,1); }
 #chat-send:disabled { opacity: .5; cursor: wait; }
 </style>
 
@@ -45,7 +46,7 @@ title: Ask AI
     return d;
   }
 
-  add("Hai! 👋 Tanya apa saja soal pengalaman, skill, dan proyek Evan — English atau Indonesia.", 'bot');
+  add("🤖 Hai! Tanya apa saja soal pengalaman, skill, dan proyek Evan — English atau Indonesia.", 'bot');
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
