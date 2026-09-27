@@ -1,1 +1,28 @@
-<!-- Custom <head> additions go here (analytics, fonts, extra meta tags). -->
+<!-- Custom <head> additions: icons + structured data. -->
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+{% if page.url == "/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Evan Hanif Widiatama",
+  "jobTitle": "AI Engineer",
+  "url": "https://my-name-is.evanhfw.my.id/",
+  "image": "https://my-name-is.evanhfw.my.id/assets/img/og-card.jpg",
+  "email": "mailto:evan.hanif.w@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Surakarta", "addressCountry": "ID" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universitas Sebelas Maret" },
+  "worksFor": { "@type": "Organization", "name": "rubythalib.ai" },
+  "sameAs": [
+    "https://www.linkedin.com/in/evanhanif/",
+    "https://github.com/evanhfw",
+    "https://www.datacamp.com/portfolio/studiesevan",
+    "https://www.kaggle.com/vnn777"
+  ],
+  "knowsAbout": ["Machine Learning", "Computer Vision", "Time Series Forecasting", "MLOps", "Large Language Models"]
+}
+</script>
+{% endif %}

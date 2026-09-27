@@ -1,7 +1,9 @@
 title: Evan Hanif Widiatama
-logo: /assets/img/circleprofile.png
+logo: /assets/img/circleprofile.webp
 description: AI Engineer | Computer Vision, ML & Backend
 # show_downloads: true
 theme: jekyll-theme-minimal
+url: https://my-name-is.evanhfw.my.id
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
