@@ -1,6 +1,11 @@
+---
+layout: default
+title: Certifications
+---
+
 # Certification Pages
 
-## **[Back to Homepage](https://evanhfw.github.io/)**
+## **[Back to Homepage](/)**
 
 ### Summary
 
