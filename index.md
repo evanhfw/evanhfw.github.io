@@ -14,6 +14,8 @@ Currently an **AI Engineer at rubythalib.ai**, deployed to **Sinarmas Mining / P
 
 📍 Surakarta, Indonesia
 
+🧪 **Playground:** [Ask AI](/chat/) · [Lab](/lab/) · [Terminal](/terminal/) · [Uses](/uses/)
+
 ---
 
 ## **Experience**

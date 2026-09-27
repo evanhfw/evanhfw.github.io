@@ -1,0 +1,82 @@
+---
+layout: default
+title: Ask AI
+---
+<h2>🤖 Ask AI about me</h2>
+<p>Tanya apa saja soal pengalaman, skill, atau proyek Evan. Jawabannya dihasilkan LLM (deepseek-v4.1-flash) dari data profil di situs ini — jadi dia tidak akan mengarang di luar itu.</p>
+
+<div id="chat">
+  <div id="chat-log" aria-live="polite"></div>
+  <form id="chat-form">
+    <input id="chat-input" maxlength="500" autocomplete="off" placeholder="Tulis pertanyaan… (English / Indonesia)" />
+    <button id="chat-send" type="submit">Kirim</button>
+  </form>
+  <p><small id="chat-hint">Contoh: “What is Evan’s experience with computer vision?” · Kuota: 5 pertanyaan / 10 menit.</small></p>
+</div>
+
+<style>
+#chat { margin: 12px 0 24px; }
+#chat-log { display: flex; flex-direction: column; gap: 8px; margin-bottom: 10px; max-height: 480px; overflow-y: auto; }
+.msg { padding: 8px 12px; border-radius: 8px; border: 1px solid rgba(128,128,128,.35); max-width: 92%; white-space: pre-wrap; }
+.msg.me { align-self: flex-end; background: rgba(38,124,185,.10); border-color: rgba(38,124,185,.45); }
+.msg.bot { align-self: flex-start; background: rgba(128,128,128,.08); }
+.msg.err { align-self: flex-start; border-color: rgba(200,60,60,.55); background: rgba(200,60,60,.08); }
+.msg.pending { opacity: .55; }
+#chat-form { display: flex; gap: 8px; }
+#chat-input { flex: 1; padding: 9px 11px; border-radius: 6px; border: 1px solid rgba(128,128,128,.45); background: transparent; color: inherit; font: inherit; }
+#chat-send { padding: 9px 16px; border-radius: 6px; border: 1px solid rgba(38,124,185,.6); background: rgba(38,124,185,.15); color: inherit; font: inherit; cursor: pointer; }
+#chat-send:disabled { opacity: .5; cursor: wait; }
+</style>
+
+<script>
+(() => {
+  const log = document.getElementById('chat-log');
+  const form = document.getElementById('chat-form');
+  const input = document.getElementById('chat-input');
+  const send = document.getElementById('chat-send');
+  const history = [];
+
+  function add(text, cls) {
+    const d = document.createElement('div');
+    d.className = 'msg ' + cls;
+    d.textContent = text;
+    log.appendChild(d);
+    log.scrollTop = log.scrollHeight;
+    return d;
+  }
+
+  add("Hai! 👋 Tanya apa saja soal pengalaman, skill, dan proyek Evan — English atau Indonesia.", 'bot');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const q = input.value.trim();
+    if (!q) return;
+    add(q, 'me');
+    input.value = '';
+    send.disabled = true;
+    const pending = add('…', 'bot pending');
+    try {
+      const r = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: q, history: history.slice(-3) }),
+      });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok) {
+        pending.className = 'msg err';
+        pending.textContent = j.message || 'Ada gangguan, coba lagi ya.';
+      } else {
+        pending.className = 'msg bot';
+        pending.textContent = j.answer;
+        history.push([q, j.answer]);
+      }
+    } catch (err) {
+      pending.className = 'msg err';
+      pending.textContent = 'Gagal menghubungi server. Coba lagi ya.';
+    } finally {
+      send.disabled = false;
+      input.focus();
+    }
+  });
+})();
+</script>
