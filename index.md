@@ -1,7 +1,7 @@
 ---
 layout: default
 title: AI Engineer
-image: /assets/img/og-card.jpg?v=2
+image: /assets/img/og-card.jpg?v=3
 ---
 
 ## **About Me**

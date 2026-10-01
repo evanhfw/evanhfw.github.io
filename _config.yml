@@ -3,7 +3,7 @@ logo: /assets/img/circleprofile.webp?v=2
 description: AI Engineer | Computer Vision, ML & Backend
 # show_downloads: true
 theme: jekyll-theme-minimal
-url: https://my-name-is.evanhfw.my.id
+url: https://hello.evanhfw.my.id
 permalink: /blog/:title/
 defaults:
   - scope:

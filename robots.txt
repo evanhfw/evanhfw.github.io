@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://my-name-is.evanhfw.my.id/sitemap.xml
+Sitemap: https://hello.evanhfw.my.id/sitemap.xml

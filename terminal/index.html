@@ -7,7 +7,7 @@ title: Terminal
 
 <div id="term">
   <div id="term-out" aria-live="polite"></div>
-  <div id="term-line"><span class="prompt">evan@my-name-is:~$</span> <input id="term-in" autocomplete="off" spellcheck="false" /></div>
+  <div id="term-line"><span class="prompt">evan@hello:~$</span> <input id="term-in" autocomplete="off" spellcheck="false" /></div>
 </div>
 
 <style>
@@ -96,9 +96,9 @@ title: Terminal
       else w(`no such page "${arg}" — try: ls`, 'err');
     },
     neofetch: () => w(
-      '    .---.      evan@my-name-is\n' +
+      '    .---.      evan@hello\n' +
       '   / o o \\\\     -----------------------\n' +
-      '   \\\\ _^_ /     host    : my-name-is.evanhfw.my.id\n' +
+      '   \\\\ _^_ /     host    : hello.evanhfw.my.id\n' +
       '    `---`      engine  : Jekyll + nginx (self-hosted)\n' +
       '               shell   : mini-shell v1\n' +
       '               uptime  : see /lab\n' +
@@ -111,7 +111,7 @@ title: Terminal
 
   function run(raw) {
     const line = raw.trim();
-    wt('evan@my-name-is:~$ ' + line, 'cmd');
+    wt('evan@hello:~$ ' + line, 'cmd');
     if (!line) return;
     const [cmd, ...rest] = line.split(/\s+/);
     const fn = commands[cmd.toLowerCase()];
