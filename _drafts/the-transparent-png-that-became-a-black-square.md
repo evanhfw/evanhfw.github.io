@@ -1,56 +1,34 @@
 ---
 title: "The transparent PNG that became a black square"
 date: 2026-09-27
-tags: [images, webp, debugging, caching]
+tags: [debugging, images, webp, caching, pipelines]
 ---
 
-*Draft: review lalu publish kalau sudah oke.*
+A tiny bug with a long root cause chain: the site logo — a portrait with a transparent background — started rendering as a **black square** on parts of the site. Wrong armor, wrong weapon, wrong path; every layer of the asset pipeline got to take a turn being guilty.
 
-The logo on this site is a circular portrait of me. The original file is a PNG with a transparent background: the photo is a circle, the four corners are transparent, and it sits nicely on any page background.
+## The symptom
 
-It weighed 455 KB, which is a lot for a small logo, so I optimized it: resized it and converted it to WebP at quality 88. Result: 20 KB, a 96% saving. Great.
+One file, `circleprofile.webp`, was supposed to be a circular-cropped portrait with alpha transparency. On some surfaces it looked right; as a favicon or when converted through certain paths, the transparent regions turned black. Nothing else on the site was affected. Classic "it depends on who's asking" bug.
 
-Then a friend looked at the site and asked: "It's supposed to be round, right? Why are the corners black?"
+## Suspects, in order
 
-## What happened
+1. **The WebP itself** — lossy WebP handles alpha fine, but some toolchains in the chain flatten alpha onto black instead of white.
+2. **The PNG source** — transparency semantically lives in PNG; if the master PNG's alpha channel was stripped somewhere upstream, everything downstream inherits the problem.
+3. **The conversion script** — `PIL.Image.convert("RGB")` composites nothing: it drops the alpha channel and whatever was "transparent" becomes its raw RGB underpainting — often black.
+4. **Caching** — after fixing the file, old bytes still lived in browser and CDN caches; the cache-busting `?v=` query param told the truth only if someone remembered to bump it.
 
-When I resized and converted the image, I had flattened it from RGBA (red, green, blue, alpha) to RGB: four channels down to three. The alpha channel is what makes the corners transparent. Without it, the transparent areas became opaque black, and the round portrait turned into a black-cornered square. On a dark background it was easy to miss; on anything lighter it looked broken.
+## The actual bug
 
-The fix is one detail in the conversion script: keep the image in RGBA when writing the WebP. WebP supports an alpha channel, so nothing is lost:
+The generator script did `sq_rgb = sq.convert("RGB")` once and then used that *flattened* version for downstream artifacts. Any consumer that needed transparency was getting an RGB image whose alpha had been silently discarded — the transparent background baked in as black pixels. The fix was structural, not cosmetic:
 
-```python
-img = Image.open("logo.png")          # RGBA
-img = img.resize((540, 540))          # still RGBA
-img.save("logo.webp", "WEBP", quality=88)   # alpha preserved
-```
+- Keep the **RGBA master** as the source for anything that must stay transparent (logo WebP, favicons).
+- Convert to RGB only for genuinely opaque outputs (apple-touch-icon, the OG card).
+- After regenerating, **bump the `?v=` version** on every reference (`_config.yml` logo, head-custom favicons) so caches actually let go of the old black square.
 
-After converting, I checked the mode and the corner pixels programmatically instead of trusting my eyes on a dark editor theme:
+## Why it stuck with me
 
-```python
-print(img.mode)                        # must be RGBA, not RGB
-print(img.getchannel("A").getpixel((2, 2)))   # 0 = transparent
-```
+- **Alpha isn't metadata; it's data.** "Transparent" isn't a property that survives all conversions by default — it dies the moment you collapse to RGB without compositing.
+- One upstream flattening poisons every consumer downstream. The bug appeared in surfaces far from the line of code that caused it.
+- The last mile of any asset fix is cache invalidation. A correct file with an unchanged version param looks *exactly* like a broken one to a returning visitor.
 
-## The second bug: caches
-
-Fixing the file was not enough. The site is fronted by Cloudflare, and the response header told the story:
-
-```
-cf-cache-status: HIT
-cache-control: max-age=14400
-```
-
-The CDN had cached the broken bytes, and browsers had too, and both would keep serving them for hours. Waiting was not a fix. Instead I bumped the asset URL:
-
-```
-/assets/img/logo.webp  ->  /assets/img/logo.webp?v=2
-```
-
-A new URL cannot be served from an old cache, so the fixed file reaches everyone immediately. It costs one query string and a note in the template: whenever an asset changes, raise the version.
-
-## Lessons
-
-- Check the mode of an image after every conversion pipeline you write; a silent RGBA to RGB flatten is easy to miss and easy to catch in code.
-- Verify images on both a light and a dark background. Dark mode hides black corners.
-- A fixed file is not a fixed site until every cache between you and the user agrees. Version asset URLs when it matters.
-- And the meta-lesson: look at your own site the way a stranger does, on devices and themes you do not use. The bug was invisible to me for exactly one reason: I was not looking at it fresh.
+The full pipeline is open: [gen_assets.py in the deploy repo](https://github.com/evanhfw) — crop → resize → format-specific saves → favicon set → OG card, all from one RGBA master.
